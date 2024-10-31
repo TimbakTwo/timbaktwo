@@ -1,0 +1,396 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 60px;
+}
+
+section {
+    scroll-margin-top: 60px;
+    
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 70px;
+    background-color: #333;
+    padding: 20px 70px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other content */
+    
+}
+
+.nav-menu.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Text color change on scroll */
+.nav-menu.scrolled a {
+    color: #fff; /* White text for better contrast */
+ }
+
+/* Navigation link styling */
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-menu li a:hover {
+    color: #4CAF50;
+}
+
+/* About me */
+
+/* Layout and styling */
+.about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #e0ebf5;
+    color: #333333;
+    
+}
+
+/* Profile picture styling */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Header and intro */
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile h2 {
+    margin-top: 10px;
+}
+
+.intro {
+    font-style: italic;
+    color: #666;
+    font-size: 1.3rem
+}
+
+/* Section titles */
+.bio-interests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.bio,.interests,.achievements {
+    border: 3px solid #43295b79;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.bio h3, .interests h3, .achievements h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Achievements list */
+.achievements ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievements li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.achievements li::before {
+    content: "✔"; /* Unicode or icon for checkmark */
+    position: absolute;
+    left: 0; /* Position checkmark on the left */
+    color: green; /* Set checkmark color */
+}
+
+/* Make texts bigger */
+.bio,.interests,.achievements{
+    font-size: 1.3rem;
+}
+
+.about-me h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* c */
+
+/* Projects section styling */
+.projects-section {
+    min-height: 100vh;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: #f9f4ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Projects grid layout */
+.projects-grid {
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Individual project item */
+.project-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+    
+}
+.project-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.project-item h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Project image styling */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Project links */
+.project-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+
+ /* Skills section styling */
+ .skills-section {
+    min-height: 100vh;
+    /* max-width: 800px; */
+    margin: auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 0;
+    background: #ccc;
+    
+}
+
+.skills-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3em;
+    color: #181417cb;
+}
+
+/* Skills list styling */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual skill item */
+.skill-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px; /* Adjust width as needed */
+    height: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+    
+}
+
+.skill-item:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+.skill-item h3 {
+    font-size: 1.5em;
+    color: #252503d7;
+}
+
+.skill-item i {
+    font-size: 2em; /* Adjust icon size */
+    color: #333; /* Icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+/* Contact section styling */
+.contact-section {
+    min-height: 100vh;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f0f8ff;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Contact info styling */
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info p {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.contact-info .social-list {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+
+.contact-info .social-list i {
+    font-size: 2rem;
+    color: #501d1de5;
+}
+
+/* Contact form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #091520e1;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0d1d2e;
+}
+
+
+
+
+
+
+
